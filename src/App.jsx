@@ -6,7 +6,9 @@ import { useState } from 'react'
   const [puppies, setPuppies] = useState(puppyList);
   return (
     <>
-     
+     {
+      puppies.map((puppy) => {return <p key={puppy.id}>{puppy.name}</p>})
+     }
     </>
   )
 }
